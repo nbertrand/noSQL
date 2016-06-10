@@ -1,0 +1,12 @@
+doctype html
+html(lang="fr")
+	head
+		title Ajouter une employée
+	body
+		form(action='/collaborateurs/new', method='POST')
+			p Veuillez renseigner les informations relative à la nouvelle employée.
+			each val in infos
+					p
+						|#{val}   -  
+						input(type="text", name="#{val}", value='')
+			input(type='submit', value = 'valider')

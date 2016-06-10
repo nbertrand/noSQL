@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+	head
+		title Afficher les employées
+	body
+		ul.nav
+			each name in ["Ajout d'employées", "Statistiques"]
+				li
+					if name == "Ajout d'employées"
+						a(href="collaborateurs/new")=name	
+					if name == "Statistiques"
+						a(href="../statistiques")=name
+		p Les employées
+				each val in employees	
+					each j, i in val						
+						ul
+							if i != '_id'
+								li #{i}:  #{j]
+					
+					p -------------

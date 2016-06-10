@@ -1,1 +1,3 @@
 # noSQL
+
+#Licence: MIT
